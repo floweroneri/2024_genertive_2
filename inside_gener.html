@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>제너러티브II 기록과 선택</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+        <style>
+            @font-face {
+            font-family: 'regular';
+            src: url('regular.otf') format('opentype');
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                overflow: hidden;
+                font-family: "regular";
+            }
+            h2 {
+                margin-top: 9%;
+                margin-bottom: 1%
+/*                margin-bottom: 10%;*/
+            }
+            #subtitle {
+                margin: 0;
+                margin-bottom: 5%;
+            }
+            #name {
+                font-size: 1.3em;
+                
+            }
+            #description {
+                width: 60%;
+                word-break: keep-all;
+                font-size: 0.95em;
+                line-height: 1.8;
+                text-align: center;
+            }
+            #description_right{
+                width: 60%;
+                word-break: keep-all;
+                font-size: 0.95em;
+                line-height: 1.8;
+                text-align: center;
+            }
+            #link {
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            top: 0%;
+            left:1.5%;
+            font-size: 25px;
+            }
+
+
+            #left, #right {
+                height: 100vh; /* 화면 전체 높이 */
+                transition: width 0.5s ease; /* 너비 변화 트랜지션 효과 */
+            }
+            #left {
+                padding: 0;
+                margin: 0;
+                width: 50%;
+                background-color: white;
+                border: 1px solid black;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: black;
+            }
+            #right {
+                width: 50%;
+                background-color: black;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+    
+            }
+            #left.expanded {
+                width: 5%; /* 클릭 시 확장될 너비 */
+                white-space: pre;
+                overflow: auto;     
+            }
+            #right.expanded {
+                width: 95%; /* 클릭 시 축소될 너비 */
+            }
+            .iframe-container {
+                width: 90%;
+                height: 0;
+                padding-top: 56.25%;  /* 16:9 비율 */
+                position: relative; /* 상대 위치 */
+                scollbar
+            }
+
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%; /* 자식 요소가 iframe의 크기를 채우도록 설정 */
+
+            }
+            iframe::-webkit-scrollbar {
+             display: none;
+            }
+            #link {
+                text-decoration: none;
+                color: black;
+            }
+            ::selection {
+              background-color: #E7E7E7; /* 노란색 배경 */
+            }
+
+            /* 웹킷 브라우저 전용 선택자 */
+            ::-webkit-selection {
+              background-color: #E7E7E7;
+            }
+            #description_right::selection {
+          background-color: #A9A9A9; /* 선택된 텍스트 배경을 #A9A9A9로 설정 */
+          color: white; /* 선택된 텍스트의 색상을 흰색으로 설정 */
+        }
+
+        /* 웹킷 브라우저 전용 */
+        #description_right::-webkit-selection {
+          background-color: #A9A9A9; /* 선택된 텍스트 배경을 #A9A9A9로 설정 */
+          color: white; /* 선택된 텍스트의 색상을 흰색으로 설정 */
+        }
+        </style>
+    </head>
+    <body>
+        <a href="index.html" id="link"><p>← 기록과 선택</p></a>
+        <span id="left">
+            <h2>제너러티브디자인II</h2>
+            <p id="name">기록과 선택</p>
+             <p id="subtitle">지도 : 양민하 교수님</p>
+            <!-- <p id="description">"제너러티브디자인II" 수업은 월드와이드웹과 서버, 그리고 웹 어플리케이션 전반의 개략적인 지식을 학습합니다.<br><br>HTML5 기반의 클라이언트 웹과 ThreeJS나 P5JS와 같은 그래픽 환경 연출 중심의 자바스크립트 라이브러리를 디자인 도구로 활용하는 실습을 합니다. 또 AJAX를 활용한 비동기식 서버 인터랙션이나 PHP기반의 서버 연동과 같은 디자이너가 이해하면 유용한 웹의 구조적인 환경에 대해서도 공부합니다. <br><br>수업에서는 "기록과 선택"이라는 웹으로 수행할 수 있는 가장 구체적이고 효율적인 동작 방식에 대한 주제가 제시되었으며, 전시된 작품들은 학생들이 수업 후반에 제작한 "기록과 선택" 프로젝트의 결과물입니다. </p> -->
+        </span>
+        <span id="right">
+   <!--          <h2>제너러티브디자인II</h2>
+            <p id="name">기록과 선택</p>
+             <p id="subtitle">양민하 교수님</p> -->
+            <p id="description_right">"제너러티브디자인II" 수업은 월드와이드웹과 서버, 그리고 웹 어플리케이션 전반의 개략적인 지식을 학습합니다.<br><br>HTML5 기반의 클라이언트 웹과 ThreeJS나 P5JS와 같은 그래픽 환경 연출 중심의 자바스크립트 라이브러리를 디자인 도구로 활용하는 실습을 합니다. 또 AJAX를 활용한 비동기식 서버 인터랙션이나 PHP기반의 서버 연동과 같은 디자이너가 이해하면 유용한 웹의 구조적인 환경에 대해서도 공부합니다. <br><br>수업에서는 "기록과 선택"이라는 웹으로 수행할 수 있는 가장 구체적이고 효율적인 동작 방식에 대한 주제가 제시되었으며, 전시된 작품들은 학생들이 수업 후반에 제작한 "기록과 선택" 프로젝트의 결과물입니다. </p>
+        </span>
+        </span>
+<!--        <script>
+            const right = document.getElementById("right");
+            const left = document.getElementById("left");
+
+            right.addEventListener("click", () => {
+                // 클릭 시 클래스 추가/제거
+                left.classList.toggle("expanded");
+                right.classList.toggle("expanded");
+
+                // #right가 expanded일 때 #left의 텍스트 색상 변경
+                if (right.classList.contains("expanded")) {
+                    left.querySelectorAll("p, h2").forEach(element => {
+                        element.style.color = "#ffffff"; // 흰색으로 변경
+                    });
+                } else {
+                    left.querySelectorAll("p, h2").forEach(element => {
+                        element.style.color = "black"; // 기본 색상으로 돌아감
+                    });
+                }
+            });
+        </script> -->
+    </body>
+</html>
+
+
+
